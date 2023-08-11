@@ -1,0 +1,46 @@
+@import "mixins";
+@import "variables";
+@import "navbar";
+@import "reset";
+
+.container {
+    width: $container_width;
+    height: $container_height;
+    margin: $container_margin;
+    background-color:$container_background_color;
+    border: $container_border_size $container_border_type $container_border_color;
+    .fontAwesome{
+        @include widthAndHeight(100%, 100%);
+        padding: $Icon_Container_padding;
+        i{
+            font-size: $Icon-size;
+            cursor: pointer;
+        }
+    }
+
+    p{
+        font-size: 25px;
+        padding: 12px;
+        &:hover {
+            color: azure;
+            cursor : pointer;
+        }
+        transition: all 0.3s ease-in-out    ;
+        -webkit-transition: all 0.3s ease-in-out    ;
+        -moz-transition: all 0.3s ease-in-out    ;
+        -ms-transition: all 0.3s ease-in-out    ;
+        -o-transition: all 0.3s ease-in-out    ;
+    }
+
+}
+
+.blackBackground {
+    @include widthAndHeight(100%, 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba($color: #000000, $alpha: 0.1);
+    z-index: 2;
+}
